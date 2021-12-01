@@ -1,0 +1,45 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+
+.btn 
+    cursor: pointer
+    text-transform: uppercase
+    font-weight: 500
+    font-size: 12px
+    line-height: 20px
+    letter-spacing: 2px
+    border: 1px solid $orange
+    border-radius: 4px
+    background-color: $orange
+    color: #fff
+    transition: .3s ease all
+    
+    &:hover
+        border: 1px solid $dark-orange
+        background-color: $dark-orange
+        box-shadow: -11px 18px 36px rgba(242, 153, 74, 0.13)
+
+    &--clear
+        background-color: transparent
+        color: $orange
+
+        &:hover
+            color: #fff
+
+    //sizes of the btns
+    // &--sign {
+    //     width: 112px;
+    //     height: 36px;
+    // }
+    // &--about {
+    //     width: 157px;
+    //     height: 46px;
+    // }
+    // &--price {
+    //     width: 155px;
+    //     height: 54px;
+    // }
+    // &--faq {
+    //     width: 128px;
+    //     height: 56px;
+    // }

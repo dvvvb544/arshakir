@@ -1,0 +1,69 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+
+.about 
+    padding-top: 40px
+    margin-bottom: 60px
+
+    @include minw(768) 
+        padding-top: 91px
+        margin-bottom: 141px
+
+    &-wrap 
+        margin-top: 30px
+        
+        @include minw(500)
+            background-position: center center
+            background-size: 100% 100%
+            background-image: url(../img/bg/runner.svg)
+        
+        @include minw(768)
+            margin-top: 0
+            background-size: auto
+            background-repeat: no-repeat
+            background-position: top right
+        
+    &__body 
+        margin-bottom: 50px
+
+        @include minw(768)    
+            max-width: 531px
+            margin-bottom: 183px    
+
+    &__title 
+        margin-bottom: 19px
+
+    &__subtitle 
+        margin-bottom: 40px
+        font-size: 18px
+        line-height: 22px
+        color: $purple
+
+        @include minw(768)
+            max-width: 450px       
+
+    &__btn-wrap 
+        @include maxw(500)  
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    .btn 
+        width: 157px
+        height: 46px
+    
+    .btn--clear 
+        @include maxw(500) 
+            margin-top: 10px
+            margin-left: 0
+        
+        margin-left: 20px
+    
+    &__partners        
+        display: flex
+        justify-content: space-around 
+        flex-wrap: wrap
+        
+        @include maxw(768) 
+            img 
+                max-width: 33%

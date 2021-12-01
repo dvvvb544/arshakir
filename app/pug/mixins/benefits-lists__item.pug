@@ -1,0 +1,9 @@
+- titles = ['First', 'Second', 'Third', 'Fourth'];
+
+
+for t in titles
+    .benefits-lists__item
+        p.benefits-lists__link.benefits-lists__title= t
+
+        for word in titles
+            p.benefits-lists__link= word + "page"

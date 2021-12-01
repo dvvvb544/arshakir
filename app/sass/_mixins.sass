@@ -1,0 +1,8 @@
+@mixin maxw($var)
+    @media (max-width: #{$var}px)
+        @content 
+
+  
+@mixin minw($var) 
+    @media (min-width: #{$var}px) 
+        @content

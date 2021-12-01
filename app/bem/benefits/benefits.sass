@@ -1,0 +1,94 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+
+.benefits 
+    padding-bottom: 55px
+
+    &-wrap 
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url(../img/bg/footer__bg-bubbles.png)
+
+    &-top 
+        display: flex
+        justify-content: space-between
+        margin-bottom: 86px
+    
+    &__social 
+        &-wrap 
+            display: flex
+            justify-content: space-between
+            width: 152px
+
+        &-link 
+            width: 40px
+            height: 40px
+            border-radius: 50%
+            background-color: #272856
+            background-repeat: no-repeat
+            background-position: center center
+            transition: .3s ease all
+
+            &:nth-child(1) 
+                background-image: url(../img/social-media/google.svg)
+
+                &:hover 
+                    background-color: #e94235
+                
+            
+            &:nth-child(2) 
+                background-image: url(../img/social-media/twitter.svg)
+
+                &:hover 
+                    background-color: #1d9bf0
+                
+            
+            &:nth-child(3) 
+                background-image: url(../img/social-media/facebook.svg)
+
+                &:hover 
+                    background-color: #395693      
+
+    &-lists 
+        margin-bottom: 120px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+
+        &__item 
+            width: 35%
+            padding-bottom: 30px
+
+            @include minw(600)
+                width: 20%
+                padding-bottom: 0
+
+            @include minw(1000) 
+                width: 10%
+
+        &__title, &__link
+            font-family: 'Inter', sans-serif
+            font-size: 15px
+            letter-spacing: 0.2px
+            color: #fff
+        
+        &__title 
+            margin-bottom: 25px
+            font-weight: 700            
+            line-height: 18px
+        
+        &__link 
+            line-height: 20px
+            margin-bottom: 16px
+
+            &:last-child 
+                margin-bottom: 0
+                
+    &-copy 
+        max-width: 401px
+
+        &__item 
+            margin-right: 32px
+
+            &:last-child 
+                margin-right: 0

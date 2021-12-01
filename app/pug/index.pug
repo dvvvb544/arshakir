@@ -1,0 +1,131 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='icon' type='image/svg+xml' href='img/favicon.svg')
+        title ARShakir
+        //- style
+            //- include css/cssReset.css
+            //- include css/style.css
+        link(rel="stylesheet", href="css/style.min.css")
+        //- script(src="js/burger.js" defer) 
+        //- script(src="js/email_subscription.js" defer) 
+        //- script(src="js/modal-registration.js" defer) 
+        //- script(src="js/registration.js" defer) 
+        //- script(src="js/reg-body__passwordToggle.js" defer) 
+        //- script(src="js/anchors.js" defer) 
+        script(src="js/app.min.js" defer) 
+    body 
+        .header-wrap
+            .wrapper
+                header.header
+                    .header__menu
+                        nav.nav 
+                            a(href="#about").nav__link About
+                            a(href="#gallery").nav__link Gallery
+                            a(href="#pricing").nav__link Pricing
+                            a(href="#faq").nav__link FAQ
+                            a(href="#benefits").nav__link Benefits
+                        .header__btn-wrap
+                            button.btn.btn--clear Sign In
+                            button#reg-btn.btn Sign Up
+                    .burger
+                        div
+                        div
+                        div
+
+        .about-wrap
+            .wrapper
+                section.about#about 
+                    .about__body
+                        .title.about__title Many reasons to get up and start to get back in the business 
+                        .about__subtitle The harder you work for something, the greater you’ll feel when you achieve it.
+                        .about__btn-wrap
+                            button.btn Learn More
+                            button.btn.btn--clear Demo
+                    .about__partners.center
+                        include mixins/about__partners
+        
+        .gallery-wrap
+            .gallery__leftFallingStars
+            .gallery__leftFlyingStarsToTheRight
+            .gallery__rightFallingStars
+            .wrapper
+                section.gallery#gallery
+                    .title.text-center Your choice
+                    .gallery__subtitle.text-center There are many reasons to get down and start to get depressed about your situation.
+                    .gallery__cards
+                        include mixins/cards__item
+        
+        .pricing-wrap
+            .wrapper
+                section.pricing#pricing
+                    .pricing__body
+                        .title.pricing__title Invest property for better <span class="pricing__txt-orange">business</span>
+                        .pricing__subtitle We are committed to processing the information in order to contact you and talk about your project. We are committed to processing the information.
+                        button.btn Learn More
+                    .pricing__info
+                        img(src="img/pricing__streams.jpg", alt="streams").pricing__info-img
+                        .pricing__info-body
+                            .pricing__info-residence Omah mukti residence
+                            .pricing__info-address Merpati sidomuncul 26 street, UK
+                            .pricing__info-money $176,000
+                            .pricing__info-request Funding Request
+                        .pricing__info-arrow
+                            img(src="img/pricing__arrow.svg", alt="arrow")
+
+        .faq-wrap
+            .wrapper        
+                section.faq#faq 
+                    .faq__title.text-center There are many reasons to get down
+                    .faq__subtitle.text-center There are many reasons to get down and start to get depressed about your situation. 
+                    form(action="#" name="newsSubForm").faq__form 
+                        input(type="email" id="sub_email" name="sub_email" placeholder="Your Email").faq__input 
+                        button(type="submit" value="Submit" id="email_subscription").btn.faq__btn Send
+                    .faq__nospam.text-center No spam. Only releases, updates and discounts
+
+        .benefits-wrap
+            .wrapper
+                footer.benefits#benefits
+                    .benefits-top
+                        span.logo ARShakir
+                        .benefits__social-wrap 
+                            a(href="#").benefits__social-link
+                            a(href="#").benefits__social-link
+                            a(href="#").benefits__social-link
+                    .benefits-lists
+                        include mixins/benefits-lists__item
+                    .benefits-copy.center
+                        span.benefits-copy__item © Copyrights 2021
+                        span.benefits-copy__item Privacy policy
+                        span.benefits-copy__item Terms of service
+
+        .modal-signup__outer
+            .modal-signup.center.text-center
+                .modal-signup__close &times;
+                .modal-signup__title.title Sign Up
+                
+                .reg-body.modal-signup__reg-body.modal-signup__reg-body--visible                   
+                    p.reg-body__text Fill in the data for registration on the site
+                    form(action="#").reg-body__form.center
+                        input(type="email" id="reg_email" name="reg_email" placeholder="Your Email").reg-body__input
+                        input(type="tel", name="phone" placeholder="Your phone number").reg-body__input
+                        .reg-body__input-wrap
+                            img(src="img/eye--show.svg", alt="eye" id="reg-body__password-eye").reg-body__eye
+                            input(type="password", name="password" placeholder="Your password" id="reg-body__password").reg-body__input
+                        .reg-body__input-wrap
+                            img(src="img/eye--show.svg", alt="eye" id="reg-body__confirmPassword-eye").reg-body__eye
+                            input(type="password", name="confirmPassword" placeholder="Confirm the password" id="reg-body__confirmPassword").reg-body__input
+                    button.btn.reg-body__btn.reg-body__signup#reg-body__signUp Sign Up
+                
+                .reg-success.modal-signup__reg-success                   
+                    p.reg-body__text Thank you!
+                    img(src="img/heart.svg", alt="heart").reg-body__icon
+                    p.reg-body__text Registration completed. 
+                    p.reg-body__text Use sign in form to continue.
+                    button.btn.reg-body__btn Sign In
+
+        .modal-notice#modal-notice
+            p Your e-mail was sent!

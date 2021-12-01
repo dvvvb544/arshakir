@@ -1,0 +1,77 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+    
+.faq 
+    margin-bottom: 148px
+    padding-top: 50px
+    padding-bottom: 52px
+    background: #1b1b41
+    border-radius: 5px
+
+    &-wrap 
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url(../img/bg/faq__bg-lines.png)
+    
+    &__title 
+        margin-bottom: 20px
+        font-size: 36px
+        line-height: 43px
+        font-weight: 500
+        color: $orange
+
+    &__subtitle 
+        margin-bottom: 23px
+        font-size: 16px
+        line-height: 22px
+        color: #95A1BB
+
+    &__form 
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        border-radius: 5px
+        align-items: center     
+
+        @include minw(768) 
+            flex-direction: row
+            width: 416px
+            margin: 0 auto
+        
+    .btn 
+        width: 128px
+        height: 56px
+        border-radius: 5px
+
+        @include minw(768)           
+            border-radius: 0 5px 5px 0
+    
+    &__input 
+        margin-bottom: 20px
+        width: 288px
+        height: 56px
+        padding: 18px 16px
+        font-size: 14px
+        line-height: 20px
+        font-family: 'Inter', sans-serif
+        letter-spacing: 0.2px
+        color: #fff
+        border: none
+        border-radius: 5px
+        background-color: #2f3060
+
+        &::placeholder 
+            color: #53547c
+        
+
+        @include minw(768)
+            margin-bottom: 0
+            border-radius: 5px 0 0 5px
+
+    &__nospam 
+        margin-top: 16px
+        font-weight: 500
+        font-size: 14px
+        line-height: 20px
+        letter-spacing: 0.2px
+        color: $purple

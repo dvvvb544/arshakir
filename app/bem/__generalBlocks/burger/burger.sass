@@ -1,0 +1,18 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+    
+.burger 
+    position: absolute
+    cursor: pointer
+    top: 8px
+    right: 0
+    
+    @include minw(768)
+        display: none
+
+    div
+        width: 25px
+        height: 3px
+        background-color: #fff
+        margin: 3px 0
+        border-radius: 5px

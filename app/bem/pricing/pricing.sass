@@ -1,0 +1,123 @@
+@use './app/sass/variables' as *
+@use './app/sass/mixins' as *
+
+.pricing
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    padding-bottom: 33px
+    margin-bottom: 30px
+    align-items: center
+
+    @include minw(768)
+        flex-direction: row
+        padding-bottom: 83px
+        margin-bottom: 60px
+    
+    &-wrap
+        background-repeat: no-repeat
+        background-position: center right
+        background-image: url(../img/bg/pricing__pixelMap.png)
+    
+
+    &__body 
+        margin-bottom: 30px
+
+        @include minw(768)
+            max-width: 470px
+            padding-top: 50px
+            margin-bottom: 0
+
+        .btn 
+            width: 155px
+            height: 54px
+            margin: 0 auto
+            display: block
+    
+            @include minw(768) 
+                margin: 0
+
+    &__title 
+        font-size: 42px
+        margin-bottom: 32px
+
+        @include minw(768)
+            max-width: 440px
+        
+    
+    &__txt-orange 
+        color: $orange
+    
+    &__subtitle 
+        margin-bottom: 46px
+        font-size: 15px
+        line-height: 28px
+        letter-spacing: 0.5px
+        color: $purple
+    
+    &__info 
+        position: relative
+        max-width: 260px
+        border-radius: 10px
+        transition: .3s ease all
+
+        &:hover 
+           @include minw(768) 
+                transform: scale(1.05)
+            
+        
+
+        &-img 
+            width: 260px
+            height: 200px
+            border-radius: 10px 10px 0 0         
+        
+        &-body 
+            padding-top: 49px
+            padding-left: 30px
+            padding-bottom: 56px
+            background-color: #fff
+            border-radius: 0 0 10px 10px
+        
+        &-residence 
+            margin-bottom: 8px
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            color: #212B36
+        
+        &-address 
+            margin-bottom: 24px
+            font-size: 10px
+            line-height: 12px
+            letter-spacing: 0.5px
+            color: #637381
+
+        &-money 
+            margin-bottom: 6px
+            font-weight: 300
+            font-size: 24px
+            line-height: 28px
+            color: #13C296
+        
+        &-request 
+            font-size: 10px
+            line-height: 12px
+            text-transform: uppercase
+            letter-spacing: 0.5px
+            color: #98A4AF
+        
+        &-arrow 
+            position: absolute
+            top: 122px
+            left: -30px
+            width: 60px
+            height: 60px
+            background: #13C296
+            box-shadow: -11px 16px 25px rgba(19, 194, 150, 0.24)
+            border-radius: 6px
+
+            img 
+                position: absolute
+                top: 20px
+                left: 15px
